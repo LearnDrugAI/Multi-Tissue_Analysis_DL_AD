@@ -21,13 +21,13 @@ To run the R scripts in this repository, you need the following R packages:
 * SNPlocs.Hsapiens.dbSNP144.GRCh37
 * GenomicRanges
 * dplyr
-* qvalue
-* TopmedPipeline 
+* qvalue 
 * biomaRt 
 * clusterProfiler 
 * ggplot2
 * RColorBrewer
 * data.table
+* RColorBrewer
 ## Installation
 Clone the repository to your local machine:
 ```
@@ -66,4 +66,6 @@ Sourced from the LINCS L1000 project (CMap), measuring 978 landmark genes to inf
 We used fastGWA-GLMM GWAS data from Jiang et al. and UK Biobank to analyze the association between predicted gene expression (from 49 GTEx tissues) and 61 brain-related traits using S-PrediXcan. Results were adjusted for multiple comparisons, with significant associations visualized via heatmaps and normalized significance counts.Methods are based on [SPrediXcan and MetaXcan](https://github.com/hakyimlab/MetaXcan).
 #### Gene Expression and Significant Gene Count for AD Family History-Related Traits
 After Q-value correction, 18 traits passed the 0.01 FDR threshold. Significant gene counts across tissues were visualized using Z-score normalization.
+Make_Significant_Counts_Normalized_Ratio.R:After Q-value correction, 18 traits passed the 0.01 FDR threshold. Significant gene counts across tissues were visualized using Z-score normalization.
+
 
