@@ -36,7 +36,6 @@ cd AD-TWAS-Analysis-R
 ```
 ## Code Structure
 The code is divided into functional modules, each serving a specific purpose in the overall analysis workflow.
-
 ### 1. Data Preprocessing
 Before running the main analysis, raw data must be preprocessed.
 #### GWAS Summary Statistics
@@ -63,3 +62,8 @@ Filtered out non-SNVs and multi-allelic loci, then converted the genotype data i
 #### Drug-induced Gene Expression Data
 Sourced from the LINCS L1000 project (CMap), measuring 978 landmark genes to infer genome-wide expression. These data were used for analyzing drug effects on gene expression and drug repositioning studies.  
 * filt_trt_cp_for_cmap.R:  Filtered "trt_cp" (drug treatment) samples and used the cmapR package to extract and save the expression statistics matrix for further analysis.
+### 2. Association between genetic prediction gene expression level and 61 brain-related characteristics
+We used fastGWA-GLMM GWAS data from Jiang et al. and UK Biobank to analyze the association between predicted gene expression (from 49 GTEx tissues) and 61 brain-related traits using S-PrediXcan. Results were adjusted for multiple comparisons, with significant associations visualized via heatmaps and normalized significance counts.Methods are based on [SPrediXcan and MetaXcan](https://github.com/hakyimlab/MetaXcan).
+#### Gene Expression and Significant Gene Count for AD Family History-Related Traits
+After Q-value correction, 18 traits passed the 0.01 FDR threshold. Significant gene counts across tissues were visualized using Z-score normalization.
+
