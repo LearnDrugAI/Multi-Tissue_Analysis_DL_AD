@@ -36,8 +36,8 @@ To run the R scripts in this repository, you need the following R packages:
 ## Installation
 Clone the repository to your local machine:
 ```
-git clone https://github.com/BreadcrumbsMulti-Tissue_Analysis_DL_AD/AD-TWAS-Analysis-R.git
-cd AD-TWAS-Analysis-R
+git clone https://github.com/BreadcrumbsMulti-Tissue_Analysis_DL_AD/Multi-Tissue_Analysis_DL_AD.git
+cd Multi-Tissue_Analysis_DL_AD
 ```
 ## Code Structure
 The code is divided into functional modules, each serving a specific purpose in the overall analysis workflow.
