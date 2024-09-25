@@ -117,4 +117,12 @@ To evaluate drug set enrichment in transcriptome-wide analysis, we used self-con
 * drug_set_enrich_KEGG.R: Evaluates drug repositioning results using ATC drug classifications from KEGG, including antiepileptic, antiparkinson, psychotropic, antipsychotic, and antidepressant/antianxiety drugs.
 * drug_set_enrich_MEDI.R: Validates drug repositioning results using the MEDI-HPS dataset, which contains high-precision drug indication information.
 * drug_set_enrich_ClinicalTrials.R: Assesses drug repositioning results based on a list of drugs from ClinicalTrials.gov.
-  
+## Contributing
+We welcome contributions from the community. If you wish to contribute:
+1. Fork the repository.  
+2. Create a new branch (git checkout -b feature-branch).  
+3. Make your changes and commit (git commit -am 'Add new feature').  
+4. Push to the branch (git push origin feature-branch).  
+5. Create a Pull Request.
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
