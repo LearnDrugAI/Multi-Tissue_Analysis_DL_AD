@@ -29,6 +29,9 @@ To run the R scripts in this repository, you need the following R packages:
 * data.table
 * RColorBrewer
 * tidyr
+* reshape2
+* grid
+* ggtext
 ## Installation
 Clone the repository to your local machine:
 ```
@@ -68,14 +71,27 @@ We used fastGWA-GLMM GWAS data from Jiang et al. and UK Biobank to analyze the a
 #### Gene Expression and Significant Gene Count for AD Family History-Related Traits
 After Q-value correction, 18 traits passed the 0.01 FDR threshold. Significant gene counts across tissues were visualized using Z-score normalization.
 * Make_Significant_Counts_Normalized_Ratio.R:After Q-value correction, 18 traits passed the 0.01 FDR threshold. Significant gene counts across tissues were visualized using Z-score normalization.
-* ADTraits_Tissue_GeneCount: Visualizing the distribution and total number of significant genes across 49 tissues for five key AD-related traits.
-* ADTraits_GeneRegulationCount: The number of genes that are up-regulated, down-regulated, and ambiguous in each AD-related trait.
+* ADTraits_Tissue_GeneCount.R: Visualizing the distribution and total number of significant genes across 49 tissues for five key AD-related traits.
+* ADTraits_GeneRegulationCount.R: The number of genes that are up-regulated, down-regulated, and ambiguous in each AD-related trait.
 #### Gene Expression and Enrichment Analysis for AD Family History-Related Traits
 We performed a comprehensive gene expression analysis of five Alzheimer’s disease (AD) family history-related traits based on the S-PrediXcan method.
 * Make_AD_Traits_associated_gene_plots.R: Plots associated gene networks.
 * GO_KEGG_Enrichment_Analysis: Performed GO and KEGG enrichment using the clusterProfiler package.
 ### 3. Individual-level PrediXcan Analysis of the ROSMAP Dataset and APOE Association Results
+#### Training of gene expression prediction model and database construction
+* Gene Expression Model Training and Database Construction: Using genotype and gene expression data from 553 ROSMAP samples, we trained gene expression prediction models and formatted them for PrediXcan using the PredictDB method. In accordance with GTEx guidelines, 60 PEER factors were applied. Full details can be found at [PredictDBPipeline](https://github.com/hakyimlab/PredictDBPipeline).
+#### Model Training and PrediXcan Analysis at Individual Level
+*Using trained gene expression models, we applied individual-level PrediXcan to predict gene expression and assess its association with key phenotypes such as APOE genotype, age at death, pathology scores, and cognitive diagnosis. This approach enabled us to evaluate the influence of gene expression on these traits. For detailed methods, see [PrediXcan](https://github.com/hakyimlab/PrediXcan).
 #### Gene Expression Network Analysis of AD-Related Phenotypes
 * Make_Brain_disorder_associated_gene_plots.R: Performs shared network analysis of gene expression for 9 Alzheimer’s disease (AD)-related phenotypes.
-
+#### Functional Enrichment Analysis of APOE Genotype-Related Genes
+* GO_KEGG_Enrichment_Analysis: Performed GO and KEGG enrichment using the clusterProfiler package.
+### 4. Drug Repositioning Analysis and Potential Therapeutic Drugs for Alzheimer's Disease
+#### Drug Repositioning via Gene Expression Correlation
+Based on the method by Hon-Cheong So et al., we compared disease-related gene expression changes with drug-induced gene expression profiles to identify potential drug repositioning candidates.
+* R codes used to compare drug and disease expression profiles, as well as ranking tests for evaluating the significance of drug scores, can be found online at:
+https://sites.google.com/site/honcheongso/software/gwascmap.
+* Drug Repositioning Analysis for AD Family History-Related Traits
+  * getTissueDrugHead50.R: Extracts the top 50 most potential drugs for each trait and tissue.
+  * UpSetR.R: Performs intersection analysis to reveal common drugs and tissues among three AD family history traits.
   
