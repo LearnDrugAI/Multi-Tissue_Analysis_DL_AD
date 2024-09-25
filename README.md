@@ -16,8 +16,11 @@ This repository contains the code and methods used in the research paper "Integr
 This project integrates transcriptome-wide association studies (TWAS) from multiple tissues using R-based pipelines to identify Alzheimer's Disease-related genes and conduct pathway and drug repositioning analyses. We highlight the roles of genes such as APOE, APOC1, and others in AD pathology, and investigate potential therapeutic drugs using gene expression profiles.
 ## Requirements
 To run the R scripts in this repository, you need the following R packages:
-* tidyverse 
-* plink2R 
+* VariantAnnotation 
+* BSgenome.Hsapiens.UCSC.hg19
+* SNPlocs.Hsapiens.dbSNP144.GRCh37
+* GenomicRanges
+* dplyr
 * qvalue
 * TopmedPipeline 
 * biomaRt 
@@ -57,3 +60,6 @@ Filtered out non-SNVs and multi-allelic loci, then converted the genotype data i
 * preprocess_filter_and_convert_SNP_matrix.R: Prepares genotype data for TWAS analysis by converting file formats, filtering SNPs, and handling missing values.
 * preprocess_get_SNPAnnot.R:Annotated SNPs using the UCSC hg19 reference genome and dbSNP137, extracting RSIDs and adding them to the information table.
 * preprocess_get_GeneAnnot.R：Retrieved gene chromosomal positions, IDs, and types from the Ensembl database, filtering out non-autosomal genes to retain only autosomal annotations.
+#### Drug-induced Gene Expression Data
+Sourced from the LINCS L1000 project (CMap), measuring 978 landmark genes to infer genome-wide expression. These data were used for analyzing drug effects on gene expression and drug repositioning studies.  
+* filt_trt_cp_for_cmap.R:  Filtered "trt_cp" (drug treatment) samples and used the cmapR package to extract and save the expression statistics matrix for further analysis.
