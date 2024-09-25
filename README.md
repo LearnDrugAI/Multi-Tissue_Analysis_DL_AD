@@ -32,6 +32,7 @@ To run the R scripts in this repository, you need the following R packages:
 * reshape2
 * grid
 * ggtext
+* stringr
 ## Installation
 Clone the repository to your local machine:
 ```
