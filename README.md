@@ -91,6 +91,7 @@ We performed a comprehensive gene expression analysis of five Alzheimer’s dise
 Based on the method by Hon-Cheong So et al., we compared disease-related gene expression changes with drug-induced gene expression profiles to identify potential drug repositioning candidates.
 * R codes used to compare drug and disease expression profiles, as well as ranking tests for evaluating the significance of drug scores, can be found online at:
 https://sites.google.com/site/honcheongso/software/gwascmap.
+* DrugIDTransform.R：Converts sig_id from the LINCS L1000 dataset to pert_iname to obtain standard drug names.
 * Drug Repositioning Analysis for AD Family History-Related Traits
   * getTissueDrugHead50.R: Extracts the top 50 most potential drugs for each trait and tissue.
   * UpSetR.R: Performs intersection analysis to reveal common drugs and tissues among three AD family history traits.
