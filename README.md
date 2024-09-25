@@ -74,3 +74,8 @@ After Q-value correction, 18 traits passed the 0.01 FDR threshold. Significant g
 We performed a comprehensive gene expression analysis of five Alzheimer’s disease (AD) family history-related traits based on the S-PrediXcan method.
 * Make_AD_Traits_associated_gene_plots.R: Plots associated gene networks.
 * GO_KEGG_Enrichment_Analysis: Performed GO and KEGG enrichment using the clusterProfiler package.
+### 3. Individual-level PrediXcan Analysis of the ROSMAP Dataset and APOE Association Results
+#### Gene Expression Network Analysis of AD-Related Phenotypes
+* Make_Brain_disorder_associated_gene_plots.R: Performs shared network analysis of gene expression for 9 Alzheimer’s disease (AD)-related phenotypes.
+
+  
