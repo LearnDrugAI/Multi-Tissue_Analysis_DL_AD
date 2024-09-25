@@ -33,12 +33,28 @@ To run the R scripts in this repository, you need the following R packages:
 * grid
 * ggtext
 * stringr
-## Installation
+## Clone the Repository
 Clone the repository to your local machine:
 ```
 git clone https://github.com/BreadcrumbsMulti-Tissue_Analysis_DL_AD/Multi-Tissue_Analysis_DL_AD.git
 cd Multi-Tissue_Analysis_DL_AD
 ```
+## Install Required R Packages
+Install the necessary R packages to run the code in this repository:  
+* CRAN Packages:
+```
+install.packages(c("dplyr", "ggplot2", "RColorBrewer", "data.table", "tidyr", "reshape2", "grid", "ggtext", "stringr"))
+```
+* Bioconductor Packages:
+  * First, ensure BiocManager is installed:
+    ```
+    if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+    ```
+  * Then, install the required Bioconductor packages:
+    ```
+    BiocManager::install(c("VariantAnnotation", "BSgenome.Hsapiens.UCSC.hg19", "SNPlocs.Hsapiens.dbSNP144.GRCh37", "GenomicRanges", "qvalue", "biomaRt", "clusterProfiler"))
+    ```
 ## Code Structure
 The code is divided into functional modules, each serving a specific purpose in the overall analysis workflow.
 ### 1. Data Preprocessing
