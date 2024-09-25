@@ -54,5 +54,6 @@ For more details, refer to the [Hakyimlab Summary-GWAS-Imputation repository](ht
 This study uses data sets from Religious Orders Study and Memory and Aging Project (ROSMAP), which is managed by Rush Alzheimer's Disease Center in Chicago.  
 Scripts:
 Filtered out non-SNVs and multi-allelic loci, then converted the genotype data into an SNP matrix for association analysis.
-* filter_and_convert_SNP_matrix.R: Prepares genotype data for TWAS analysis by converting file formats, filtering SNPs, and handling missing values.
-
+* preprocess_filter_and_convert_SNP_matrix.R: Prepares genotype data for TWAS analysis by converting file formats, filtering SNPs, and handling missing values.
+* preprocess_get_SNPAnnot.R:Annotated SNPs using the UCSC hg19 reference genome and dbSNP137, extracting RSIDs and adding them to the information table.
+* preprocess_get_GeneAnnot.R：Retrieved gene chromosomal positions, IDs, and types from the Ensembl database, filtering out non-autosomal genes to retain only autosomal annotations.
