@@ -94,4 +94,9 @@ https://sites.google.com/site/honcheongso/software/gwascmap.
 * Drug Repositioning Analysis for AD Family History-Related Traits
   * getTissueDrugHead50.R: Extracts the top 50 most potential drugs for each trait and tissue.
   * UpSetR.R: Performs intersection analysis to reveal common drugs and tissues among three AD family history traits.
+### 5. Drug Repositioning Enrichment Analysis Method
+To evaluate drug set enrichment in transcriptome-wide analysis, we used self-contained and competitive tests based on Hon-Cheong So et al.'s method, along with random drug sets for comparison.
+* drug_set_enrich_KEGG.R: Evaluates drug repositioning results using ATC drug classifications from KEGG, including antiepileptic, antiparkinson, psychotropic, antipsychotic, and antidepressant/antianxiety drugs.
+* drug_set_enrich_MEDI.R: Validates drug repositioning results using the MEDI-HPS dataset, which contains high-precision drug indication information.
+* drug_set_enrich_ClinicalTrials.R: Assesses drug repositioning results based on a list of drugs from ClinicalTrials.gov.
   
