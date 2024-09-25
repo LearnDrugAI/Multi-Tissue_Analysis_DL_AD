@@ -70,4 +70,7 @@ After Q-value correction, 18 traits passed the 0.01 FDR threshold. Significant g
 * Make_Significant_Counts_Normalized_Ratio.R:After Q-value correction, 18 traits passed the 0.01 FDR threshold. Significant gene counts across tissues were visualized using Z-score normalization.
 * ADTraits_Tissue_GeneCount: Visualizing the distribution and total number of significant genes across 49 tissues for five key AD-related traits.
 * ADTraits_GeneRegulationCount: The number of genes that are up-regulated, down-regulated, and ambiguous in each AD-related trait.
-
+#### Gene Expression and Enrichment Analysis for AD Family History-Related Traits
+We performed a comprehensive gene expression analysis of five Alzheimer’s disease (AD) family history-related traits based on the S-PrediXcan method.
+* Make_AD_Traits_associated_gene_plots.R: Plots associated gene networks.
+* GO_KEGG_Enrichment_Analysis: Performed GO and KEGG enrichment using the clusterProfiler package.
