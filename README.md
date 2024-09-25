@@ -28,6 +28,7 @@ To run the R scripts in this repository, you need the following R packages:
 * RColorBrewer
 * data.table
 * RColorBrewer
+* tidyr
 ## Installation
 Clone the repository to your local machine:
 ```
@@ -67,5 +68,5 @@ We used fastGWA-GLMM GWAS data from Jiang et al. and UK Biobank to analyze the a
 #### Gene Expression and Significant Gene Count for AD Family History-Related Traits
 After Q-value correction, 18 traits passed the 0.01 FDR threshold. Significant gene counts across tissues were visualized using Z-score normalization.
 Make_Significant_Counts_Normalized_Ratio.R:After Q-value correction, 18 traits passed the 0.01 FDR threshold. Significant gene counts across tissues were visualized using Z-score normalization.
-
+ADTraits_Tissue_GeneCount: Visualizing the distribution and total number of significant genes across 49 tissues for five key AD-related traits.
 
