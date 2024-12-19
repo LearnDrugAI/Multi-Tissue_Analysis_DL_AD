@@ -117,6 +117,35 @@ To evaluate drug set enrichment in transcriptome-wide analysis, we used self-con
 * drug_set_enrich_KEGG.R: Evaluates drug repositioning results using ATC drug classifications from KEGG, including antiepileptic, antiparkinson, psychotropic, antipsychotic, and antidepressant/antianxiety drugs.
 * drug_set_enrich_MEDI.R: Validates drug repositioning results using the MEDI-HPS dataset, which contains high-precision drug indication information.
 * drug_set_enrich_ClinicalTrials.R: Assesses drug repositioning results based on a list of drugs from ClinicalTrials.gov.
+
+### 6. AD-MIF
+
+#### Requirement
+- Pytorch --- 1.12.1
+- Python --- 3.8.16
+- Numpy --- 1.24.3
+- Scipy --- 1.10.1
+- Sklearn --- 1.2.2
+- Munkres --- 1.1.4
+- tqdm ---4.65.0
+- Matplotlib ---3.7.1
+
+#### Usage
+
+#### Code structure
+- ```data_loader.py```: loads the dataset and construct the gen graph
+- ```opt.py```: defines parameters
+- ```utils.py```: defines the utility functions
+- ```encoder.py```: defines the AE and GAE
+- ```AD-MIF.py```: defines the architecture of network
+- ```main.py```: run the model
+#### Example command
+
+- Formal training model 
+```
+python main.py --name AD
+```
+
 ## Contributing
 We welcome contributions from the community. If you wish to contribute:
 1. Fork the repository.  
